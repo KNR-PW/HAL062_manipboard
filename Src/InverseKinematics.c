@@ -23,6 +23,23 @@
 #define TOLERANCE 0.01
 
 #define VELOCITY_DELTA_T 0.01
+
+struct Position WristPosition;
+struct Position TCPPosition;
+struct Position Velocity;
+
+struct Orientation  TCPOrientation, Omega;
+
+enum MMode ManipulatorMode;
+
+enum Disconnect DisconnectDoF;
+
+union F2I angle, speed, meas_angle, read_value, kinematics_in;
+
+uint8_t GripperState;		//tryb chwytaka 0 - STOP, 1 - OTWORZ, 2 - ZAMKNIJ
+float JointVelocity;
+volatile uint8_t newmode;		//flaga oznaczajaca nowy tryb
+
 const float DOF_MAX[] =
 { DOF1MAX, DOF2MAX, DOF3MAX, DOF4MAX, DOF5MAX, DOF6MAX };
 const float DOF_MIN[] =

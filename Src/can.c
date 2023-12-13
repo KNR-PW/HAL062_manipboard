@@ -4,15 +4,28 @@
 
 #include "gpio.h"
 
+uint32_t CAN_TxMailbox;
+CAN_TxHeaderTypeDef TxHeader2;
+uint8_t TxData2[8];
+CAN_RxHeaderTypeDef RxHeader2;
+uint8_t RxData2[8];
+
+
+
+uint32_t CAN_TxMailbox1;
+CAN_TxHeaderTypeDef TxHeader1;
+uint8_t TxData1[8];
+CAN_RxHeaderTypeDef RxHeader1;
+uint8_t RxData1[8];
+
+uint8_t PredkosciGlobal;
+
 /* USER CODE BEGIN 0 */
 
 /* USER CODE END 0 */
 
 CAN_HandleTypeDef hcan1;
 CAN_HandleTypeDef hcan2;
-void COM_RunCanAction1();
-void COM_RunCanAction2();
-void ReadToInstructions();
 
 extern float vx, vy, vz;
 
@@ -224,9 +237,9 @@ void SendInstructions()
 				}
 			}
 		}
-		while (HAL_CAN_AddTxMessage(&hcan2, &TxHeader2, TxData2, &CAN_TxMailbox)
-				!= HAL_OK)
-			;
+//		while (HAL_CAN_AddTxMessage(&hcan2, &TxHeader2, TxData2, &CAN_TxMailbox)
+//				!= HAL_OK)
+//			;
 
 	}
 }

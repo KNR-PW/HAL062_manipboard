@@ -8,7 +8,7 @@
 #ifndef INC_FORWARDKINEMATICS_C_
 #define INC_FORWARDKINEMATICS_C_
 
-#include "main.h"
+//#include "main.h"
 #include "InverseKinematics.h"
 
 void DH_Matrix (arm_matrix_instance_f32 *T, float alpha, float theta, float a, float d);

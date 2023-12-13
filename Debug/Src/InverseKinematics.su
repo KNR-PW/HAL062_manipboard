@@ -1,0 +1,15 @@
+../Src/InverseKinematics.c:74:6:StateFooLF	8	static
+../Src/InverseKinematics.c:142:6:CalculatePositionIncrement	88	static
+../Src/InverseKinematics.c:193:6:InverseKinematicsInit	8	static
+../Src/InverseKinematics.c:217:6:CalculateInverseKinematics	120	static
+../Src/InverseKinematics.c:329:6:CalculateLowerAngles	104	static
+../Src/InverseKinematics.c:411:6:NormalizeSolutions	16	static
+../Src/InverseKinematics.c:428:6:CalculateUpperAngles	288	static
+../Src/InverseKinematics.c:510:9:CheckLimits	32	static
+../Src/InverseKinematics.c:523:7:CalculateDistance	24	static
+../Src/InverseKinematics.c:534:6:CheckSolutions	16	static
+../Src/InverseKinematics.c:559:6:TransformToolFull	408	static
+../Src/InverseKinematics.c:616:6:InvertDHMatrix	144	static
+../Src/InverseKinematics.c:670:6:TransformToolWrist	24	static
+../Src/InverseKinematics.c:677:5:ChooseSolution	40	static
+../Src/InverseKinematics.c:716:6:WriteSolution	24	static

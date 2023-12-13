@@ -8,7 +8,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
-#include "main.h"
+//#include "main.h"
 #include "InverseKinematics.h"
 
 /* USER CODE BEGIN Includes */
@@ -17,6 +17,10 @@
 
 extern CAN_HandleTypeDef hcan1;
 extern CAN_HandleTypeDef hcan2;
+
+void COM_RunCanAction1();
+void COM_RunCanAction2();
+void ReadToInstructions();
 
 /* USER CODE BEGIN Private defines */
 
@@ -31,19 +35,19 @@ void SendAngles();
 void SendSpeeds();
 void SendGripper();
 void SendInstructions();
-uint32_t CAN_TxMailbox;
-CAN_TxHeaderTypeDef TxHeader2;
-uint8_t TxData2[8];
-CAN_RxHeaderTypeDef RxHeader2;
-uint8_t RxData2[8];
+extern uint32_t CAN_TxMailbox;
+extern CAN_TxHeaderTypeDef TxHeader2;
+extern uint8_t TxData2[8];
+extern CAN_RxHeaderTypeDef RxHeader2;
+extern uint8_t RxData2[8];
 
-uint32_t CAN_TxMailbox1;
-CAN_TxHeaderTypeDef TxHeader1;
-uint8_t TxData1[8];
-CAN_RxHeaderTypeDef RxHeader1;
-uint8_t RxData1[8];
+extern uint32_t CAN_TxMailbox1;
+extern CAN_TxHeaderTypeDef TxHeader1;
+extern uint8_t TxData1[8];
+extern CAN_RxHeaderTypeDef RxHeader1;
+extern uint8_t RxData1[8];
 
-uint8_t PredkosciGlobal;
+extern uint8_t PredkosciGlobal;
 
 
 

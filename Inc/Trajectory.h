@@ -11,7 +11,7 @@
 #include "main.h"
 #include "Trajectory.h"
 
-int trajectory_number;
+extern int trajectory_number;
 
 void trajectory_generator(int num);
 #endif /* INC_TRAJECTORY_C_ */

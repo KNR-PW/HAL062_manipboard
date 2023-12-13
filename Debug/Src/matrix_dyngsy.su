@@ -1,0 +1,3 @@
+../Src/matrix_dyngsy.c:4:6:arm_mat_init_f32	24	static
+../Src/matrix_dyngsy.c:19:12:arm_mat_mult_f32	88	static
+../Src/matrix_dyngsy.c:225:12:arm_mat_trans_f32	48	static

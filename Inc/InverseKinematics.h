@@ -19,19 +19,24 @@
 #define DOF3_5Distance 510.0
 #define GripperLenght 100
 
+extern enum MMode ManipulatorMode;
+extern volatile uint8_t newmode;
+
+extern uint8_t GripperState;
+
 struct Position
 {
 	float x;
 	float y;
 	float z;
-}WristPosition, TCPPosition, Velocity;
+};
 
 struct Orientation
 {
 	float yaw;
 	float pitch;
 	float roll;
-} TCPOrientation, Omega;
+};
 
 enum MMode
 {
@@ -44,25 +49,24 @@ enum MMode
 	VEL_TOOL,
 	DELTA_TOOL,
 	TRAJECTORY
-}ManipulatorMode;
+};
 
 enum Disconnect
 {
 	NO,
 	DOF6,
 	DOF456
-}DisconnectDoF;
+};
 
 
 union F2I
 {
 	float f[6];
 	uint32_t i[6];
-}angle, speed, meas_angle, read_value, kinematics_in;
+};
 
-uint8_t GripperState;		//tryb chwytaka 0 - STOP, 1 - OTWORZ, 2 - ZAMKNIJ
-float JointVelocity;
-volatile uint8_t newmode;		//flaga oznaczajaca nowy tryb
+extern enum Disconnect DisconnectDoF;
+extern union F2I angle, speed, meas_angle, read_value, kinematics_in;
 
 
 void StateFoo();

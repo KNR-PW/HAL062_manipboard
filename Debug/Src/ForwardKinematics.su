@@ -1,0 +1,3 @@
+../Src/ForwardKinematics.c:12:6:DH_Matrix	48	static
+../Src/ForwardKinematics.c:34:6:CopyDHToPoisition	16	static
+../Src/ForwardKinematics.c:40:6:CalculateForwardKinematics	240	static
